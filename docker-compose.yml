@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-django-app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./todo_drf:/app/todo_drf
+    ports:
+      - "8000:8000"
+
