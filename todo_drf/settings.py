@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,8 @@ SECRET_KEY = 'django-insecure-z&i064^s$(frb9qoxxyfvp(*b(am#2xmc*%9m=hik4qur#hvh0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['elhajri-devops.me', 'www.elhajri-devops.me', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -127,3 +129,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_ALLOW_ALL = True
+
+BASE_URL = os.environ.get('MY_APP_BASE_URL', 'http://localhost:8000')
+API_URL = f'{BASE_URL}/api/task-list/'
