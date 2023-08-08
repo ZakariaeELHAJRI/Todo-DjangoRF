@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: my-django-app
+    image: my_django_app:v2
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./todo_drf:/app/todo_drf
