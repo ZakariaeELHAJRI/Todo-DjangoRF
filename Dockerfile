@@ -11,3 +11,4 @@ COPY . .
 
 # Run the Django development server
 CMD ["python", "manage.py", "runserver","--host", "0.0.0.0", "--port", "8000"]
+ 
