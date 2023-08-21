@@ -29,7 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['elhajri-devops.me', 'www.elhajri-devops.me', 'localhost', '127.0.0.1']
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
